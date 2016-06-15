@@ -1,0 +1,25 @@
+import React from 'react';
+import { storiesOf, action } from '@kadira/storybook';
+import Button from '../index';
+
+storiesOf('Confirm Button', module)
+  .add('default view', () => (
+    <Button
+      onClick={ action('button clicked') }
+    >
+      Hello - we need a confirm state here
+    </Button>
+  ))
+  .add('some emojies as the text', () => (
+    <Button>😀 😎 👍 💯</Button>
+  ))
+  .add('custom styles', () => {
+    const style = {
+      fontSize: 20,
+      textTransform: 'uppercase',
+      color: '#FF8833',
+    };
+    return (
+      <Button style={ style }>Hello</Button>
+    );
+  });
