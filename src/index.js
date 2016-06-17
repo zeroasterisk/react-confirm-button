@@ -133,7 +133,7 @@ ConfirmButton.propTypes = {
     style: React.PropTypes.object,
   }),
   // children always displayed (optional)
-  children: React.PropTypes.string,
+  children: React.PropTypes.node,
   // custom props to pass into button
   buttonProps: React.PropTypes.object,
 };
