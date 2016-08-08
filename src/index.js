@@ -57,6 +57,8 @@ export default class ConfirmButton extends React.Component {
       confirming,
       // disabled config
       disabled,
+      // optional configurations
+      asLink,
     } = this.props;
     let {
       // active state
@@ -78,6 +80,22 @@ export default class ConfirmButton extends React.Component {
       text = confirming && confirming.text || 'Confirm?';
       className = confirming && confirming.className || 'btn btn-warning';
       style = confirming && confirming.style || {};
+    }
+
+    if (asLink) {
+      return (
+        <a
+          className={classnames('confirm-button', className)}
+          style={style}
+          onClick={this.onClickToggleState}
+          disabled={isDisabled}
+          {...buttonProps}
+        >
+          {children}
+          {children ? ' ' : ''}
+          {text}
+        </a>
+      );
     }
 
     return (
@@ -136,5 +154,12 @@ ConfirmButton.propTypes = {
   children: React.PropTypes.node,
   // custom props to pass into button
   buttonProps: React.PropTypes.object,
+  // as link <a> instead of button
+  asLink: React.PropTypes.bool,
+};
+ConfirmButton.defaultProps = {
+  buttonProps: {
+    role: 'button',
+  },
 };
 
