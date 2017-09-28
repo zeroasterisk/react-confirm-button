@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export default class ConfirmButton extends React.Component {
@@ -116,46 +117,46 @@ export default class ConfirmButton extends React.Component {
 ConfirmButton.propTypes = {
   // if true, we will disable the button after confirming & disabled
   // if false || empty, we will loop around and allow click & confirm again
-  disableAfterConfirmed: React.PropTypes.bool,
+  disableAfterConfirmed: PropTypes.bool,
   // user passed in function - on confirmation
-  onConfirm: React.PropTypes.func,
+  onConfirm: PropTypes.func,
   // user passed in function - on disable, after onConfirm
-  onDisable: React.PropTypes.func,
+  onDisable: PropTypes.func,
   // user passed in function - on click, before confirmation
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
   // displayed normally, before confirming, while active
-  text: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.node,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
   ]),
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
+  className: PropTypes.string,
+  style: PropTypes.object,
   // displayed only while confirming
-  confirming: React.PropTypes.shape({
-    text: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.node,
+  confirming: PropTypes.shape({
+    text: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node,
     ]),
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
+    className: PropTypes.string,
+    style: PropTypes.object,
     // alias for onConfirm (convenience)
-    onClick: React.PropTypes.func,
+    onClick: PropTypes.func,
   }),
   // displayed only after confirmed (clicked twice, disabled)
-  disabled: React.PropTypes.shape({
-    text: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.node,
+  disabled: PropTypes.shape({
+    text: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node,
     ]),
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
+    className: PropTypes.string,
+    style: PropTypes.object,
   }),
   // children always displayed (optional)
-  children: React.PropTypes.node,
+  children: PropTypes.node,
   // custom props to pass into button
-  buttonProps: React.PropTypes.object,
+  buttonProps: PropTypes.object,
   // as link <a> instead of button
-  asLink: React.PropTypes.bool,
+  asLink: PropTypes.bool,
 };
 ConfirmButton.defaultProps = {
   buttonProps: {

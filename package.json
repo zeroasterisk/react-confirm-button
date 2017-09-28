@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-button",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "React Confirm Button Component",
   "repository": {
     "type": "git",
@@ -49,8 +49,9 @@
     "less-loader": "^2.2.3",
     "mocha": "^2.4.5",
     "node-sass": "^3.7.0",
+    "prop-types": "^15.5.10",
     "raw-loader": "^0.5.1",
-    "react": "^15.0.0",
+    "react": "^15.6.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
     "resolve-url-loader": "^1.4.3",
@@ -60,7 +61,7 @@
     "url-loader": "^0.5.7"
   },
   "peerDependencies": {
-    "react": "^0.14.7 || ^15.0.0"
+    "react": "^15.6.0 || ^16.0.0"
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
