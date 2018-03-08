@@ -4,7 +4,7 @@
   "description": "React Confirm Button Component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/you/repo.git"
+    "url": "https://github.com/zeroasterisk/react-confirm-button"
   },
   "license": "MIT",
   "scripts": {
